@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Call Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="mt-4">TxDOT Enterprise LRS</h2>
+    <div class="form-group">
+      <label for="api-version">Select API version:</label>
+      <select class="form-control" id="api-version" name="api-version">
+        <option value="">-- Choose an API version --</option>
+        <option value="1">API Version 1 (Lat, Lon)</option>
+        <option value="2">API Version 2 (Route ID, Reference Marker, Displacement)</option>
+        <option value="3">API Version 3 (Control Section Number, Mile Point Measure)</option>
+        <option value="4">API Version 4 (Route ID, Distance From Origin)</option>
+      </select>
+    </div>
+
+    <!-- Add the form fields wrapped in <div> elements with specific classes to show/hide -->
+    <!-- Form fields as in the previous example -->
+    <form id="api-form" class="d-none">
+    <!-- Add the form fields wrapped in <div> elements with specific classes to show/hide -->
+        <div class="form-field-group form-fields-1 d-none">
+            <div class="form-group">
+            <label for="lat">Lat:</label>
+            <input type="number" class="form-control" id="Lat" name="Lat">
+            </div>
+            <div class="form-group">
+            <label for="lon">Lon:</label>
+            <input type="number" class="form-control" id="Lon" name="Lon">
+            </div>
+        </div>
+        <div class="form-field-group form-fields-2 d-none">
+            <div class="form-group">
+            <label for="route-id">Route ID:</label>
+            <input type="text" class="form-control" id="RouteID" name="RouteID">
+            </div>
+            <div class="form-group">
+            <label for="reference-marker">Reference Marker:</label>
+            <input type="text" class="form-control" id="ReferenceMarker" name="ReferenceMarker">
+            </div>
+            <div class="form-group">
+            <label for="displacement">Displacement:</label>
+            <input type="text" class="form-control" id="Displacement" name="Displacement">
+            </div>
+        </div>
+        <div class="form-field-group form-fields-3 d-none">
+            <div class="form-group">
+            <label for="control-section-number">Control Section Number:</label>
+            <input type="text" class="form-control" id="ControlSectionNumber" name="ControlSectionNumber">
+            </div>
+        <div class="form-group">
+            <label for="mile-point-measure">Mile Point Measure:</label>
+            <input type="text" step="any" class="form-control" id="MilePointMeasure" name="MilePointMeasure">
+        </div>
+        </div>
+        <div class="form-field-group form-fields-4 d-none">
+        <div class="form-group">
+            <label for="route-id-4">Route ID:</label>
+            <input type="text" class="form-control" id="route-id-4" name="RouteID">
+        </div>
+        <div class="form-group">
+            <label for="distance-from-origin">Distance From Origin:</label>
+            <input type="text" step="any" class="form-control" id="DistanceFromOrigin" name="DistanceFromOrigin">
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="clear-results" class="btn btn-secondary">Clear</button>
+        <!-- <button id="export-to-csv" class="btn btn-success">Export to CSV</button> -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Export
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" id="export-to-csv" href="#">CSV</a>
+              <a class="dropdown-item" id="export-to-geojson" href="#">GeoJSON</a>
+            </div>
+        </div>
+          
+  </form>
+    <div id="api-result" class="mt-4">
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+  <!-- <script src="api-calls.js"></script> -->
+</body>
+</html>
