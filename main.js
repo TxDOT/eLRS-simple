@@ -73,6 +73,22 @@ exportToGeoJsonButton.addEventListener('click', () => {
     exportTableToGeoJSON(resultDiv);
 });
 
+// Table Controls
+const scrollLeftButton = document.getElementById('scroll-left');
+const scrollRightButton = document.getElementById('scroll-right');
+const scrollStep = 100; // Adjust this value to control the scrolling step
+
+scrollLeftButton.addEventListener('click', () => {
+  const tableContainer = document.querySelector('.table-container');
+  tableContainer.scrollLeft -= scrollStep;
+});
+
+scrollRightButton.addEventListener('click', () => {
+  const tableContainer = document.querySelector('.table-container');
+  tableContainer.scrollLeft += scrollStep;
+});
+
+
   
 
 

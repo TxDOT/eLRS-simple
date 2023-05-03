@@ -15,8 +15,13 @@ export async function callApi(version, params, resultDiv) {
     const table = buildTable(data);
     // Append the table to the resultDiv
     resultDiv.appendChild(table);
+
+    // will be new function
     // Show export button
     document.querySelector('#api-form .btn-group').style.display = 'inline-block';
+    // Show the arrow buttons
+    document.querySelector('#api-result .btn-primary').style.display = 'inline-block';
+    // document.getElementById('scroll-right').style.display = 'inline-block';
 
 
 }

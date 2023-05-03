@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -76,7 +77,7 @@
         <button id="clear-results" class="btn btn-secondary">Clear</button>
         <!-- <button id="export-to-csv" class="btn btn-success">Export to CSV</button> -->
         <div class="btn-group">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Export
             </button>
             <div class="dropdown-menu">
@@ -87,6 +88,10 @@
           
   </form>
     <div id="api-result" class="mt-4">
+        <div id="scrollButtonDiv"class="d-flex justify-content-between">
+            <button id="scroll-left" class="btn btn-primary">&larr;</button>
+            <button id="scroll-right" class="btn btn-primary">&rarr;</button>
+        </div>
     </div>
   </div>
 

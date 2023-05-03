@@ -21,7 +21,7 @@
     width: auto;
 }
 
-#api-form .btn-group {
+#api-form .btn-group, #api-result .btn-primary {
     display: none;
 }
   
